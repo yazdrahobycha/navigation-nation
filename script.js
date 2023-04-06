@@ -1,11 +1,9 @@
 const menuBars = document.getElementById('menu-bars')
 const overlay = document.querySelector('.overlay')
-const nav1 = document.querySelector('.nav1')
-const nav2 = document.querySelector('.nav2')
-const nav3 = document.querySelector('.nav3')
-const nav4 = document.querySelector('.nav4')
-const nav5 = document.querySelector('.nav5')
-const navItems = [nav1, nav2, nav3, nav4, nav5]
+const navItems = [];
+for (let i = 1; i <= 5; i++) {
+    navItems.push(document.querySelector(`.nav${i}`));
+}
 
 function navAnimation(direction1, direction2) {
     navItems.forEach((nav, i) => {
